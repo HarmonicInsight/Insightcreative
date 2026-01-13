@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "rootDirectory": "flow-journal/frontend",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite",
-  "installCommand": "npm install"
+  "builds": [
+    {
+      "src": "flow-journal/frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/flow-journal/frontend/$1"
+    }
+  ]
 }
