@@ -1,5 +1,8 @@
 {
-  "buildCommand": "cd flow-journal/frontend && npm install && npm run build",
-  "outputDirectory": "flow-journal/frontend/dist",
-  "framework": "vite"
+  "version": 2,
+  "rootDirectory": "flow-journal/frontend",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "installCommand": "npm install"
 }
