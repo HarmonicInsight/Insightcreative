@@ -36,7 +36,7 @@ function App() {
       {isLoading ? (
         <div className="text-center py-8 text-gray-500">読み込み中...</div>
       ) : (
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6 pb-36 sm:pb-32">
           {/* バケツダッシュボード */}
           <Dashboard bucketStats={bucketStats} />
 
@@ -48,11 +48,11 @@ function App() {
 
           {/* コメントログ */}
           <CommentList comments={comments} />
-
-          {/* 入力欄 */}
-          <ChatInput onSubmit={handleSubmit} />
         </div>
       )}
+
+      {/* 入力欄（固定） */}
+      <ChatInput onSubmit={handleSubmit} />
     </MainLayout>
   );
 }
